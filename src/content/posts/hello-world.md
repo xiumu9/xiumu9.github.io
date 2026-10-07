@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: 一句话简介，显示在文章列表里
-pubDatetime: 2026-10-08 03:30:45
+pubDatetime: 2026-10-08T03:30:45+08:00
 tags:
   - 随笔
   - 博客历程
