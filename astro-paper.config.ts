@@ -33,7 +33,7 @@ export default defineAstroPaperConfig({
     { name: "github",   url: "https://github.com/xiumu9" },
     { name: "douyin",   url: "#" },
     { name: "wechat",   url: "#" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "mail",     url: "mailto:xiumu@tuta.io" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
