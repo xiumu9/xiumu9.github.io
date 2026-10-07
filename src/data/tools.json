@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "name": "VS Code",
+    "url": "https://code.visualstudio.com/",
+    "description": "",
+    "category": "开发"
+  }
+]
