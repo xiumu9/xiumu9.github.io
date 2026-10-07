@@ -15,6 +15,7 @@
     "name": "Typora",
     "url": "https://www.typora.net/",
     "description": "",
-    "category": "实用工具"
+    "category": "实用工具",
+    "icon": "https://icons.duckduckgo.com/ip3/typora.io.ico"
   }
 ]
