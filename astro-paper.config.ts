@@ -44,8 +44,8 @@ export default defineAstroPaperConfig({
   ],
   donate: {
     enabled: true,
-    wechat: "/qr/wechat-placeholder.svg",
-    alipay: "/qr/alipay-placeholder.svg",
+    wechat: "/qr/wechat-pay.jpg",
+    alipay: "/qr/alipay-pay.jpg",
     tip: "如果觉得文章有帮助，欢迎打赏支持",
   },
 });
