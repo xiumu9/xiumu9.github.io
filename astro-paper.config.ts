@@ -3,12 +3,12 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://xiumu9.github.io/",
-    title: "木雨博客",
-    description: "记录技术与生活",
+    title: "反派博客",
+    description: "碌碌无为的反派",
     author: "xiumu9",
     profile: "https://github.com/xiumu9",
-    avatar: "yyyouth.jpg",
-    logoText: "xiumu9",
+    avatar: "avatar.jpg",
+    logoText: "反派博客",
     ogImage: "default-og.jpg",
     lang: "zh",
     timezone: "Asia/Shanghai",
