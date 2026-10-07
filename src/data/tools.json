@@ -10,5 +10,11 @@
     "url": "https://portswigger.net/burp/communitydownload",
     "description": "",
     "category": "渗透工具"
+  },
+  {
+    "name": "Typora",
+    "url": "https://www.typora.net/",
+    "description": "",
+    "category": "实用工具"
   }
 ]
