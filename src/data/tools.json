@@ -4,5 +4,11 @@
     "url": "https://code.visualstudio.com/",
     "description": "",
     "category": "开发"
+  },
+  {
+    "name": "Burp Suite",
+    "url": "https://portswigger.net/burp/communitydownload",
+    "description": "",
+    "category": "渗透工具"
   }
 ]
