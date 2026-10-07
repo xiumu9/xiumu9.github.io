@@ -1,0 +1,441 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Footer from "@/components/Footer.astro";
+import ToolCard from "@/components/tools/ToolCard.astro";
+import { useTranslations } from "@/i18n";
+import config from "@/config";
+import toolsData from "@/data/tools.json";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+type ToolItem = {
+  name: string;
+  url: string;
+  description?: string;
+  category?: string;
+  icon?: string;
+};
+const tools = toolsData as ToolItem[];
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(locale);
+
+const categoryOrder = [
+  "画图",
+  "设计",
+  "开发",
+  "实用工具",
+  "Agent编程",
+] as const;
+
+const rawCategories = [
+  ...new Set(tools.map(tool => tool.category).filter(Boolean)),
+] as string[];
+
+const categories = categoryOrder.filter(c =>
+  rawCategories.includes(c as string)
+) as string[];
+
+const total = tools.length;
+const categoryCounts = categories.map(cat => ({
+  name: cat,
+  count: tools.filter(tool => tool.category === cat).length,
+}));
+
+type Variant = "accent" | "inverted" | "muted" | "card";
+const variants: Variant[] = [
+  "accent",
+  "card",
+  "card",
+  "inverted",
+  "muted",
+  "card",
+];
+const spans = [
+  "md:col-span-8",
+  "md:col-span-4",
+  "md:col-span-4",
+  "md:col-span-8",
+  "md:col-span-5",
+  "md:col-span-7",
+  "md:col-span-6",
+  "md:col-span-6",
+];
+
+const categoryLabels: Record<string, { zh: string; en: string }> = {
+  画图: { zh: "画图", en: "Diagram" },
+  设计: { zh: "设计", en: "Design" },
+  开发: { zh: "开发", en: "Dev" },
+  实用工具: { zh: "实用工具", en: "Utilities" },
+  Agent编程: { zh: "Agent编程", en: "Agent Coding" },
+};
+
+function labelFor(cat: string) {
+  const entry = categoryLabels[cat];
+  if (!entry) return cat;
+  return locale === "zh" ? entry.zh : entry.en;
+}
+
+const categoryCopy: Record<string, string> = {
+  画图:
+    locale === "zh"
+      ? "手绘与流程 协作白板与架构"
+      : "Whiteboard and diagramming",
+  设计:
+    locale === "zh" ? "视觉与协作 快速出图与原型" : "Visual and collaboration",
+  开发: locale === "zh" ? "编码提效 调试与部署全链路" : "Code, debug and ship",
+  实用工具:
+    locale === "zh" ? "日常效率 截图代理与录制" : "Daily utilities and capture",
+  Agent编程:
+    locale === "zh"
+      ? "AI 协作 多 Agent 并行交付"
+      : "Agent coding and automation",
+};
+
+const topCategory = [...categoryCounts].sort((a, b) => b.count - a.count)[0];
+---
+
+<Layout title={`${t.pages.toolsTitle} | ${config.site.title}`}>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-10">
+    <!-- Toolbar + Bento Grid -->
+    <section class="mt-10">
+      <div class="max-w-[52ch]">
+        <h2 class="font-heading text-2xl font-semibold tracking-tight">
+          {locale === "zh" ? "全部工具" : "All tools"}
+        </h2>
+        <p class="text-muted-foreground mt-2 text-sm leading-relaxed">
+          {
+            locale === "zh"
+              ? "筛选分类或输入关键词，卡片会实时过滤。深色卡片为常用推荐。"
+              : "Filter by category or type to narrow the grid. Darker cards are daily favorites."
+          }
+        </p>
+      </div>
+
+      <div id="tools-root" class="mt-6" data-locale={locale}>
+        <div class="flex flex-col gap-3 sm:gap-4">
+          <div
+            class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between"
+          >
+            <div class="flex flex-wrap gap-2">
+              <button
+                data-filter="all"
+                class="tool-filter bg-accent text-accent-foreground rounded-full px-3.5 py-1.5 text-xs font-medium transition active:scale-[0.98]"
+              >
+                {t.bookmarks.allCategories}
+              </button>
+              {
+                categories.map(cat => (
+                  <button
+                    data-filter={cat}
+                    class="tool-filter border-border hover:bg-muted bg-card text-foreground rounded-full border px-3.5 py-1.5 text-xs font-medium transition active:scale-[0.98]"
+                  >
+                    {labelFor(cat)}
+                  </button>
+                ))
+              }
+            </div>
+            <div class="flex items-center gap-3">
+              <p
+                id="tools-count"
+                class="text-muted-foreground hidden font-mono text-xs sm:block"
+              >
+                {total}
+                {locale === "zh" ? "个工具" : "tools"}
+              </p>
+              <div class="relative w-full sm:w-64">
+                <input
+                  id="tools-search"
+                  type="search"
+                  placeholder={locale === "zh"
+                    ? "搜索工具..."
+                    : "Search tools..."}
+                  class="border-border bg-background placeholder:text-muted-foreground focus:border-accent focus:ring-accent/15 w-full rounded-lg border py-2 pr-3 pl-9 text-sm focus:ring-2 focus:outline-none"
+                />
+                <svg
+                  class="text-muted-foreground pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M16.5 16.5 21 21"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p
+            id="tools-count-mobile"
+            class="text-muted-foreground font-mono text-xs sm:hidden"
+          >
+            {total}
+            {locale === "zh" ? "个工具" : "tools"}
+          </p>
+        </div>
+
+        <ul id="tools-grid" class="mt-5 grid grid-cols-1 gap-3 md:grid-cols-12">
+          {
+            tools.map((tool, i) => (
+              <li
+                class:list={[
+                  "flex",
+                  spans[i % spans.length] || "md:col-span-6",
+                ]}
+                style={`--i: ${i}`}
+                data-category={tool.category}
+                data-search={`${tool.name} ${tool.description} ${tool.url} ${tool.category}`.toLowerCase()}
+              >
+                <div class="w-full">
+                  <ToolCard
+                    {...tool}
+                    variant={variants[i % variants.length] || "card"}
+                  />
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+
+        <div
+          id="tools-empty"
+          class="border-border bg-card hidden rounded-lg border border-dashed py-12 text-center"
+        >
+          <p class="font-heading text-sm font-medium">{t.a11y.noResults}</p>
+          <p class="text-muted-foreground mt-1 font-mono text-xs">
+            {
+              locale === "zh"
+                ? "试试其他关键词或切换分类"
+                : "Try another keyword or category"
+            }
+          </p>
+          <button
+            id="tools-reset"
+            class="bg-accent text-accent-foreground mt-4 inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium transition hover:opacity-90 active:scale-[0.98]"
+          >
+            {locale === "zh" ? "清除筛选" : "Clear filters"}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category breakdown: distinct editorial split, not bento -->
+    <section class="border-border mt-16 border-t pt-10">
+      <div class="max-w-[52ch]">
+        <h2 class="font-heading text-2xl font-semibold tracking-tight">
+          {locale === "zh" ? "按分类浏览" : "Browse by category"}
+        </h2>
+        <p class="text-muted-foreground mt-2 text-sm leading-relaxed">
+          {
+            locale === "zh"
+              ? "五类覆盖 画图到 Agent 编程的核心链路。每个分类附带数量与定位。"
+              : "Five groups from diagram to agent coding. Each shows count and focus."
+          }
+        </p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+        <div class="lg:col-span-5">
+          <div class="border-border bg-card rounded-lg border p-6">
+            <p class="text-muted-foreground font-mono text-xs">
+              {locale === "zh" ? "收录原则" : "Curation note"}
+            </p>
+            <h3
+              class="font-heading mt-3 text-xl leading-tight font-semibold tracking-tight"
+            >
+              {
+                locale === "zh"
+                  ? "只收常用 且能直达的工具"
+                  : "Only tools we actually use"
+              }
+            </h3>
+            <p class="text-muted-foreground mt-3 text-sm leading-relaxed">
+              {
+                locale === "zh"
+                  ? "不做大全式导航。每个工具都经过日常使用验证，点击卡片直接打开官网，不做中转。"
+                  : "No exhaustive directory. Every tool is verified in daily work and links straight to the official site."
+              }
+            </p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <a
+                href={getRelativeLocaleUrl(locale, "bookmarks")}
+                class="bg-accent text-accent-foreground inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium transition hover:opacity-90 active:scale-[0.98]"
+              >
+                {locale === "zh" ? "查看收藏" : "View bookmarks"}
+              </a>
+              <a
+                href={getRelativeLocaleUrl(locale, "projects")}
+                class="border-border bg-card hover:bg-muted inline-flex items-center rounded-lg border px-4 py-2 text-sm font-medium transition active:scale-[0.98]"
+              >
+                {locale === "zh" ? "查看项目" : "View projects"}
+              </a>
+            </div>
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <div class="bg-muted rounded-lg p-4">
+              <p class="text-muted-foreground font-mono text-xs">
+                {locale === "zh" ? "最常用" : "Top category"}
+              </p>
+              <p class="font-heading mt-1 text-sm font-semibold tracking-tight">
+                {topCategory ? labelFor(topCategory.name) : "-"}
+              </p>
+              <p class="text-muted-foreground mt-1 font-mono text-xs">
+                {topCategory?.count}
+                {locale === "zh" ? "个" : "tools"}
+              </p>
+            </div>
+            <div class="border-border bg-card rounded-lg border p-4">
+              <p class="text-muted-foreground font-mono text-xs">
+                {locale === "zh" ? "更新" : "Updated"}
+              </p>
+              <p class="font-heading mt-1 text-sm font-semibold tracking-tight">
+                {new Date().getFullYear()}
+              </p>
+              <p class="text-muted-foreground mt-1 font-mono text-xs">
+                {locale === "zh" ? "持续维护" : "maintained"}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <ul class="flex flex-col gap-3">
+            {
+              [...categoryCounts]
+                .sort((a, b) => b.count - a.count)
+                .map(item => {
+                  const width = total > 0 ? (item.count / total) * 100 : 0;
+                  const copy = categoryCopy[item.name] || "";
+                  return (
+                    <li class="border-border bg-card rounded-lg border p-4">
+                      <div class="flex items-center justify-between gap-4">
+                        <span class="font-heading text-sm font-semibold tracking-tight">
+                          {labelFor(item.name)}
+                        </span>
+                        <span class="text-muted-foreground shrink-0 font-mono text-xs tabular-nums">
+                          {item.count} {locale === "zh" ? "个" : "tools"}
+                        </span>
+                      </div>
+                      <p class="text-muted-foreground mt-1 font-mono text-xs">
+                        {copy}
+                      </p>
+                      <div class="bg-muted mt-3 h-1.5 overflow-hidden rounded-full">
+                        <div
+                          class="bg-accent h-full rounded-full"
+                          style={`width: ${width}%`}
+                        />
+                      </div>
+                    </li>
+                  );
+                })
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline>
+  function initTools() {
+    const root = document.getElementById("tools-root");
+    const grid = document.getElementById("tools-grid");
+    const empty = document.getElementById("tools-empty");
+    const count = document.getElementById("tools-count");
+    const countMobile = document.getElementById("tools-count-mobile");
+    const search = document.getElementById("tools-search");
+    const resetBtn = document.getElementById("tools-reset");
+    if (!root || !grid || !search) return;
+
+    const locale = root.dataset.locale || "zh";
+    const btns = root.querySelectorAll(".tool-filter");
+    const items = Array.from(grid.querySelectorAll("li"));
+    let activeCat = "all";
+
+    function apply() {
+      const q = search.value.trim().toLowerCase();
+      let visible = 0;
+      items.forEach(li => {
+        const cat = li.dataset.category || "";
+        const text = li.dataset.search || "";
+        const catMatch = activeCat === "all" || cat === activeCat;
+        const qMatch = !q || text.includes(q);
+        const show = catMatch && qMatch;
+        li.style.display = show ? "" : "none";
+        li.setAttribute("aria-hidden", show ? "false" : "true");
+        if (show) visible++;
+      });
+
+      const label = locale === "zh" ? visible + " 个工具" : visible + " tools";
+      if (count) count.textContent = label;
+      if (countMobile) countMobile.textContent = label;
+
+      const showEmpty = visible === 0;
+      if (empty) empty.classList.toggle("hidden", !showEmpty);
+      if (grid) grid.classList.toggle("hidden", showEmpty);
+    }
+
+    btns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        activeCat = btn.dataset.filter || "all";
+        btns.forEach(b => {
+          b.classList.remove("bg-accent", "text-accent-foreground");
+          b.classList.add("border", "border-border", "bg-card");
+        });
+        btn.classList.add("bg-accent", "text-accent-foreground");
+        btn.classList.remove("border", "border-border", "bg-card");
+        apply();
+      });
+    });
+
+    search.addEventListener("input", apply);
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        activeCat = "all";
+        search.value = "";
+        btns.forEach(b => {
+          b.classList.remove("bg-accent", "text-accent-foreground");
+          b.classList.add("border", "border-border", "bg-card");
+        });
+        const allBtn = root.querySelector('[data-filter="all"]');
+        if (allBtn) {
+          allBtn.classList.add("bg-accent", "text-accent-foreground");
+          allBtn.classList.remove("border", "border-border", "bg-card");
+        }
+        apply();
+      });
+    }
+
+    apply();
+  }
+
+  initTools();
+  document.addEventListener("astro:after-swap", initTools);
+</script>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    #tools-grid li {
+      animation: toolsIn 0.55s both;
+      animation-delay: calc(var(--i, 0) * 60ms);
+    }
+    @keyframes toolsIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+</style>

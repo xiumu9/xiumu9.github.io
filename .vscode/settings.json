@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on"
+  }
+}
