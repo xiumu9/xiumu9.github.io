@@ -18,7 +18,7 @@ const posts = defineCollection({
       tags: z.array(z.string()).default(["others"]),
       category: z.string().default("others"),
       ogImage: image().or(z.string()).optional(),
-      description: z.string(),
+      description: z.string().default("").optional(),
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       hideDonate: z.boolean().optional(),
@@ -44,7 +44,7 @@ const projects = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
-      description: z.string(),
+      description: z.string().default("").optional(),
       pubDatetime: z.date(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),

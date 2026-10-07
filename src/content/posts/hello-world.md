@@ -1,11 +1,11 @@
 ---
 title: Hello World
-description: 一句话简介，显示在文章列表里
+description: 博客启程的第一篇文章
 pubDatetime: 2026-10-08T03:30:45+08:00
 tags:
   - 随笔
   - 博客历程
-category: 未分类
+category: 日常动态
 ---
 
 经历了些许波折与折腾，这个属于我自己的小站终于初具雏形，正式和大家见面了。
