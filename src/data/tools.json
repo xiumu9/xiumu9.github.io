@@ -3,19 +3,21 @@
     "name": "VS Code",
     "url": "https://code.visualstudio.com/",
     "description": "",
-    "category": "开发"
+    "category": "开发",
+    "icon": "/tool-icons/code.visualstudio.com.ico"
   },
   {
     "name": "Burp Suite",
     "url": "https://portswigger.net/burp/communitydownload",
     "description": "",
-    "category": "渗透工具"
+    "category": "渗透工具",
+    "icon": "/tool-icons/portswigger.net.ico"
   },
   {
     "name": "Typora",
     "url": "https://www.typora.net/",
     "description": "",
     "category": "实用工具",
-    "icon": "https://icons.duckduckgo.com/ip3/typora.io.ico"
+    "icon": "/tool-icons/typora.ico"
   }
 ]
