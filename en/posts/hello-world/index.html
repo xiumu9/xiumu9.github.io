@@ -1,0 +1,623 @@
+<!DOCTYPE html><html dir="ltr" lang="en" class="overflow-y-scroll scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://xiumu9.github.io/en/posts/hello-world/"><meta name="generator" content="Astro v7.0.3"><!-- Font: Astro-managed (Google Sans Code + Noto Serif SC) --><style>@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/b4eda8f5b0eaadfb.woff") format("woff"), url("/_astro/fonts/35d9566f11e168d7.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/b36c9929cc34246e.woff") format("woff"), url("/_astro/fonts/8a0f224d304a96e2.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/965b20f5119c7f63.woff") format("woff"), url("/_astro/fonts/2237bc7136e15801.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/e53eb016a4542fa3.woff") format("woff"), url("/_astro/fonts/8f64c50129773aca.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/c983f8388f5c3d56.woff") format("woff"), url("/_astro/fonts/78f87fa90111a8b2.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/512eade1e1ea3544.woff") format("woff"), url("/_astro/fonts/e38e75d9aa3d522c.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/760bf0f194d9c2a3.woff") format("woff"), url("/_astro/fonts/4d6b302bd28aea15.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/6ff9a7a068a9b4db.woff") format("woff"), url("/_astro/fonts/c369bda42bc0c74a.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/77165338ead16abf.woff") format("woff"), url("/_astro/fonts/324c6b90b2ea3e2e.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0";src:url("/_astro/fonts/803a50f41ab1e672.woff") format("woff"), url("/_astro/fonts/2df3837192e25ea6.ttf") format("truetype");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-c486f2fa399b46f0 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-c486f2fa399b46f0","Google Sans Code-c486f2fa399b46f0 fallback: Courier New",monospace;}</style><link rel="preload" href="/_astro/fonts/b36c9929cc34246e.woff" as="font" type="font/woff" crossorigin><style>@font-face{font-family:"Noto Serif SC-f67072334e1c89f6";src:url("/_astro/fonts/6f25dbc76dc2d2c6.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:400;font-style:normal;}@font-face{font-family:"Noto Serif SC-f67072334e1c89f6";src:url("/_astro/fonts/5096dfcf0431b4a7.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:500;font-style:normal;}@font-face{font-family:"Noto Serif SC-f67072334e1c89f6";src:url("/_astro/fonts/61e7715a10443279.woff2") format("woff2");font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-weight:700;font-style:normal;}@font-face{font-family:"Noto Serif SC-f67072334e1c89f6 fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:400;font-style:normal;size-adjust:121.1077%;ascent-override:95.0394%;descent-override:23.6153%;line-gap-override:0%;}@font-face{font-family:"Noto Serif SC-f67072334e1c89f6 fallback: Times New Roman";src:local("Times New Roman");font-display:swap;font-weight:500;font-style:normal;size-adjust:121.1077%;ascent-override:95.0394%;descent-override:23.6153%;line-gap-override:0%;}@font-face{font-family:"Noto Serif SC-f67072334e1c89f6 fallback: Times New Roman Bold";src:local("Times New Roman Bold");font-display:swap;font-weight:700;font-style:normal;size-adjust:113.7264%;ascent-override:101.2078%;descent-override:25.1481%;line-gap-override:0%;}:root{--font-noto-serif:"Noto Serif SC-f67072334e1c89f6","Noto Serif SC-f67072334e1c89f6 fallback: Times New Roman","Noto Serif SC-f67072334e1c89f6 fallback: Times New Roman Bold",serif;}</style><!-- LXGW WenKai TC via loli.net mirror of Google Fonts (China-accessible) --><link rel="preconnect" href="https://fonts.loli.net"><link rel="preconnect" href="https://gstatic.loli.net" crossorigin><link href="https://fonts.loli.net/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet"><!-- Primary meta --><title>Hello World | 反派博客</title><meta name="title" content="Hello World | 反派博客"><meta name="description" content="博客启程的第一篇文章"><meta name="author" content="xiumu9"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="反派博客"><meta property="og:title" content="Hello World | 反派博客"><meta property="og:description" content="博客启程的第一篇文章"><meta property="og:url" content="https://xiumu9.github.io/en/posts/hello-world/"><meta property="og:image" content="https://xiumu9.github.io/default-og.jpg"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://xiumu9.github.io/en/posts/hello-world/"><meta property="twitter:title" content="Hello World | 反派博客"><meta property="twitter:description" content="博客启程的第一篇文章"><meta property="twitter:image" content="https://xiumu9.github.io/default-og.jpg"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="反派博客" href="https://xiumu9.github.io/rss.xml/"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) --><meta property="og:type" content="article"><meta property="article:published_time" content="2026-10-07T19:30:45.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hello World | 反派博客","datePublished":"2026-10-07T19:30:45.000Z","author":[{"@type":"Person","name":"xiumu9","url":"https://github.com/xiumu9"}]}</script><!--
+      Inline FOUC-prevention script: sets data-theme, data-palette and data-bg on
+      <html> before the browser paints. Runs synchronously, no defer/async.
+    --><script>(function(){const bgImages = {"none":"","bg1":"/_astro/bg1.BA-Kr9sO.png","bg2":"/_astro/bg2.D2x0oqW7.png","bg3":"/_astro/bg3.CXdDd1W3.png","bg4":"/_astro/bg4.AaZbbWmm.png","bg5":"/_astro/bg5.8PNPXNn1.png","bg6":"/_astro/bg6.Cz6-K3xd.png","bg7":"/_astro/bg7.5rAsi43c.png"};
+const validPalettes = ["default","pixel","dark-plus","dracula","everforest","github-dark","github-light","gruvbox-dark","gruvbox-light","nord","catppuccin","tokyo-night","kanagawa","one-dark"];
+
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        let palette = localStorage.getItem("palette") ?? "default";
+        if (!validPalettes.includes(palette)) palette = "default";
+        const bg = localStorage.getItem("bg") ?? "none";
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.setAttribute("data-palette", palette);
+        root?.setAttribute("data-bg", bg);
+        root?.classList.toggle("dark", theme === "dark");
+        const src = bgImages[bg];
+        if (src) {
+          document.documentElement.style.setProperty("--bg-image", `url("${src}")`);
+        }
+        // Expose values so theme.ts can skip re-detection.
+        window.__theme = { value: theme, palette: palette, bg: bg };
+      })();
+    })();</script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.2i1RQzKf.js"></script><link rel="stylesheet" href="/_astro/Footer.1KkJ9Nn_.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*),[data-astro-transition-scope]{animation:none!important}}
+.toc-link[data-astro-cid-3tbazgeo].toc-active{color:var(--color-accent);border-left-color:var(--color-accent);font-weight:600}
+</style><style>[data-astro-transition-scope="astro-bztu2lml-1"] { view-transition-name: \968F\7B14; }@layer astro { ::view-transition-old(\968F\7B14) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\968F\7B14) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\968F\7B14) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\968F\7B14) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-bztu2lml-2"] { view-transition-name: \535A\5BA2\5386\7A0B; }@layer astro { ::view-transition-old(\535A\5BA2\5386\7A0B) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\535A\5BA2\5386\7A0B) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\535A\5BA2\5386\7A0B) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\535A\5BA2\5386\7A0B) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"><!-- Global background image layer --><div id="bg-layer" class="pointer-events-none fixed inset-0 -z-10 hidden" aria-hidden="true"><div id="bg-image" class="absolute inset-0"></div><div id="bg-overlay" class="absolute inset-0"></div></div><a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4">Skip to content</a><header class="bg-background flex w-full flex-col items-center justify-between sm:flex-row"><div class="app-layout relative flex w-full items-baseline justify-between py-4 sm:items-center sm:py-6"><a href="/en/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none">反派博客</a><nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"><button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="menu-items" data-label-open="Open menu" data-label-close="Close menu"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg></button><ul id="menu-items" class="[&amp;&gt;li&gt;a]:hover:text-accent mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0 sm:[&amp;&gt;li]:h-8 [&amp;&gt;li&gt;a]:block [&amp;&gt;li&gt;a]:px-4 [&amp;&gt;li&gt;a]:py-3 [&amp;&gt;li&gt;a]:text-center [&amp;&gt;li&gt;a]:font-medium sm:[&amp;&gt;li&gt;a]:px-2 sm:[&amp;&gt;li&gt;a]:py-1"><li class="col-span-2"><a href="/en/posts/" class="active-nav">Posts</a></li><li class="col-span-2"><a href="/en/tags/">Tags</a></li><li class="col-span-2"><a href="/en/archives/" title="Archives" aria-label="Archives" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-8 sm:p-0"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg><span class="sm:sr-only">Archives</span></a></li><li class="col-span-1 flex items-center justify-center"><a href="/en/search/" title="Search" aria-label="Search" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-8"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg><span class="sr-only">Search</span></a></li><li class="col-span-1 flex items-center justify-center"><a href="/posts/hello-world/" class="focus-outline hover:text-accent relative flex size-full items-center justify-center gap-1 p-3 sm:size-8 sm:p-0" title="Switch language" aria-label="Switch language: 中文"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="size-6 sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 5h7M9 3v2c0 4.418-2.239 8-5 8" /><path d="M5 9c0 2.144 2.952 3.908 6.7 4M12 20l4-9 4 9M19.1 18h-6.2" /></svg><span class="sm:sr-only">中文</span></a></li><li class="col-span-1 flex items-center justify-center"><button id="palette-btn" class="focus-outline hover:[&amp;&gt;svg]:stroke-accent relative flex size-full items-center justify-center gap-1 p-4 sm:size-8 sm:p-0" title="Select theme" aria-label="default" aria-live="polite" aria-haspopup="dialog" aria-controls="palette-dialog"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="size-6 sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 21a9 9 0 0 1 0-18c4.97 0 9 3.582 9 8 0 1.06-.474 2.078-1.318 2.828S17.693 15 16.5 15H14a2 2 0 0 0-1 3.75A1.3 1.3 0 0 1 12 21" /><path d="M7.5 10.5a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11.5 7.5a1 1 0 1 0 2 0 1 1 0 1 0-2 0M15.5 10.5a1 1 0 1 0 2 0 1 1 0 1 0-2 0" /></svg><span data-palette-label class="sm:sr-only"> default </span></button></li><li class="col-span-1 flex items-center justify-center"><button id="bg-btn" class="focus-outline hover:[&amp;&gt;svg]:stroke-accent relative flex size-full items-center justify-center gap-1 p-4 sm:size-8 sm:p-0" title="切换背景" aria-label="none" aria-live="polite"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="size-6 sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z" /><path d="m3 16 5-5a2 2 0 0 1 2.5 0l2.5 2.5M14 14l6 6" /></svg><span data-bg-label class="sm:sr-only">无背景</span></button></li><li class="col-span-1 flex items-center justify-center"><button id="theme-btn" class="focus-outline hover:[&amp;&gt;svg]:stroke-accent relative size-12 p-4 sm:size-8" title="Toggle theme" aria-label="auto" aria-live="polite"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg></button></li></ul></nav></div></header><script type="module">function e(){let e=document.querySelector(`#menu-btn`),t=document.querySelector(`#menu-items`),n=document.querySelector(`#menu-icon`),r=document.querySelector(`#close-icon`);if(!e||!t||!n||!r)return;let i=e.dataset.labelOpen??`Open menu`,a=e.dataset.labelClose??`Close menu`;e.addEventListener(`click`,()=>{let o=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,o?`false`:`true`),e.setAttribute(`aria-label`,o?i:a),t.classList.toggle(`hidden`),t.classList.toggle(`grid`),n.classList.toggle(`hidden`),r.classList.toggle(`hidden`)})}function t(){let e=document.getElementById(`skip-to-content`);e&&e.addEventListener(`click`,e=>{if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.button!==0)return;e.preventDefault();let t=document.getElementById(`main-content`);t&&(t.setAttribute(`tabindex`,`-1`),t.addEventListener(`blur`,()=>t.removeAttribute(`tabindex`),{once:!0}),t.focus(),t.scrollIntoView({behavior:`smooth`}))})}e(),document.addEventListener(`astro:after-swap`,e),t(),document.addEventListener(`astro:after-swap`,t);</script><div class="mx-auto w-full max-w-[1150px] px-4"><div class="flex items-start justify-center gap-8"><main id="main-content" class="w-full max-w-3xl min-w-0 flex-1" data-pagefind-body><div class="flex w-full items-center justify-start"><a id="back-button" href="/en/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>Go back</span></a></div><script type="module">function e(){let e=document.querySelector(`#back-button`),t=sessionStorage.getItem(`backUrl`);t&&e&&(e.href=t)}document.addEventListener(`astro:page-load`,e),e();</script><h1 style="view-transition-name:hello-world" class="text-accent inline-block text-2xl font-bold sm:text-3xl">Hello World</h1><div class="my-2 flex items-center gap-2"><div class="text-muted-foreground flex items-center gap-x-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg><time class="text-sm sm:text-base" datetime="2026-10-07T19:30:45.000Z">8 Oct, 2026</time></div><span aria-hidden="true" class="text-muted-foreground max-sm:hidden hidden">|</span></div><article id="article" class="mt-8 w-full app-prose max-w-none prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"><p>经历了些许波折与折腾，这个属于我自己的小站终于初具雏形，正式和大家见面了。</p>
+<p>平时有些天马行空的随想和稍微硬核的干货，受限于短视频平台的展现形式，不太方便在短视频平台上直接发布。因此，我决定搭建这方自留地，用文字记录下当下的思考。</p>
+<p>在未来的日子里，我会在这里不定期分享一些好玩的折腾经历、新奇的想法，以及日常的踩坑与学习笔记。希望能给各位师傅们带来一点微小的启发与帮助，咱们在技术的道路上一起交流，共勉前行。</p></article><hr class="my-8 border-dashed"><div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"><button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"><span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg><span class="group-hover:text-accent sr-only text-sm md:not-sr-only"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg>Back to top</span></button></div><script data-astro-rerun>
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script><div class="mt-4 text-sm"><a href="/en/categories/日常动态/" class="border-border bg-muted rounded px-2 py-1 text-xs hover:underline">日常动态</a></div><ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"><li><a data-astro-transition-scope="astro-bztu2lml-1" href="/en/tags/随笔/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg>随笔</a></li><li><a data-astro-transition-scope="astro-bztu2lml-2" href="/en/tags/博客历程/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg>博客历程</a></li></ul><div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">Share this post:</span><div class="text-center"><a href="https://wa.me/?text=https://xiumu9.github.io/en/posts/hello-world/" title="Share this post on Whatsapp" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m3 21 1.65-3.8a9 9 0 1 1 3.4 2.9z" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg><span class="sr-only">Share this post on Whatsapp</span></a><a href="https://www.facebook.com/sharer.php?u=https://xiumu9.github.io/en/posts/hello-world/" title="Share this post on Facebook" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z" /></svg><span class="sr-only">Share this post on Facebook</span></a><a href="https://t.me/share/url?url=https://xiumu9.github.io/en/posts/hello-world/" title="Share this post on Telegram" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4" /></svg><span class="sr-only">Share this post on Telegram</span></a><a href="https://pinterest.com/pin/create/button/?url=https://xiumu9.github.io/en/posts/hello-world/" title="Share this post on Pinterest" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m8 20 4-9M10.7 14c.437 1.263 1.43 2 2.55 2 2.071 0 3.75-1.554 3.75-4a5 5 0 1 0-9.7 1.7" /><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" /></svg><span class="sr-only">Share this post on Pinterest</span></a><a href="mailto:?subject=See%20this%20post&amp;body=https://xiumu9.github.io/en/posts/hello-world/" title="Share this post via email" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">Share this post via email</span></a></div></div><section class="border-border bg-card mt-8 rounded-lg border p-6 text-center"><h3 class="font-semibold">Buy me a coffee</h3><p class="text-muted-foreground mt-1 text-sm">如果觉得文章有帮助，欢迎打赏支持</p><button id="donate-btn" class="bg-accent text-accent-foreground mt-4 rounded-full px-5 py-1.5 text-sm font-medium hover:opacity-90">Buy me a coffee</button><dialog id="donate-dialog" class="bg-card text-foreground open:animate-in m-auto w-[90vw] max-w-md rounded-xl p-0 shadow-xl backdrop:bg-black/50" aria-label="Buy me a coffee"><div class="p-6"><div class="flex items-start justify-between"><h4 class="font-semibold">Buy me a coffee</h4><button id="donate-close" class="text-muted-foreground hover:text-foreground ml-4 text-xl leading-none" aria-label="Close">×</button></div><p class="text-muted-foreground mt-1 text-xs">如果觉得文章有帮助，欢迎打赏支持</p><div class="mt-4 grid grid-cols-2 gap-4"><div class="text-center"><img src="/qr/wechat-pay.jpg" alt="WeChat" class="mx-auto w-40 rounded border bg-white p-2" loading="lazy"><p class="mt-2 text-xs font-medium">WeChat</p></div><div class="text-center"><img src="/qr/alipay-pay.jpg" alt="Alipay" class="mx-auto w-40 rounded border bg-white p-2" loading="lazy"><p class="mt-2 text-xs font-medium">Alipay</p></div></div></div></dialog></section><script type="module">function e(){let e=document.getElementById(`donate-btn`),t=document.getElementById(`donate-dialog`),n=document.getElementById(`donate-close`);!e||!t||(e.addEventListener(`click`,()=>t.showModal()),n?.addEventListener(`click`,()=>t.close()),t.addEventListener(`click`,e=>{let n=t.getBoundingClientRect();(e.clientX<n.left||e.clientX>n.right||e.clientY<n.top||e.clientY>n.bottom)&&t.close()}))}e(),document.addEventListener(`astro:after-swap`,e);</script><hr class="my-8 border-dashed"><div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2"></div></main></div></div><footer class="app-layout mt-auto"><div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"><div class="flex flex-wrap items-center gap-1"><a href="https://github.com/xiumu9" title="反派博客 on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg><span class="sr-only">反派博客 on Github</span></a><button type="button" data-qr-open="qr-dialog-douyin" class="group hover:text-accent p-2 sm:p-1" title="扫码加我抖音" aria-label="扫码加我抖音"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M21 7.917v4.034A9.95 9.95 0 0 1 16 10v4.5a6.5 6.5 0 1 1-8-6.326V12.5a2.5 2.5 0 1 0 4 2V3h4.083A6.005 6.005 0 0 0 21 7.917" /></svg><span class="sr-only">扫码加我抖音</span></button><button type="button" data-qr-open="qr-dialog-wechat" class="group hover:text-accent p-2 sm:p-1" title="扫码加我微信" aria-label="扫码加我微信"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M16.5 10c3.038 0 5.5 2.015 5.5 4.5 0 1.397-.778 2.645-2 3.47V20l-1.964-1.178A6.7 6.7 0 0 1 16.5 19c-3.038 0-5.5-2.015-5.5-4.5s2.462-4.5 5.5-4.5" /><path d="M11.197 15.698c-.69.196-1.43.302-2.197.302a8 8 0 0 1-2.612-.432L4 17v-2.801C2.763 13.117 2 11.635 2 10c0-3.314 3.134-6 7-6 3.782 0 6.863 2.57 7 5.785v.233M10 8h.01M7 8h.01M15 14h.01M18 14h.01" /></svg><span class="sr-only">扫码加我微信</span></button><a href="mailto:xiumu@tuta.io" title="Send an email to 反派博客" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">Send an email to 反派博客</span></a></div><dialog id="qr-dialog-douyin" class="bg-card text-foreground open:animate-in m-auto w-[90vw] max-w-sm rounded-xl p-0 shadow-xl backdrop:bg-black/50" aria-label="反派博客 on Douyin"><div class="p-6 text-center"><div class="flex items-start justify-between text-left"><h4 class="font-semibold">扫码加我抖音</h4><button data-qr-close class="text-muted-foreground hover:text-foreground ml-4 text-xl leading-none" aria-label="关闭">×</button></div><img src="/qr/douyin.jpg" alt="抖音二维码" class="mx-auto mt-4 w-56 rounded border bg-white p-2" loading="lazy"></div></dialog><dialog id="qr-dialog-wechat" class="bg-card text-foreground open:animate-in m-auto w-[90vw] max-w-sm rounded-xl p-0 shadow-xl backdrop:bg-black/50" aria-label="反派博客 on Wechat"><div class="p-6 text-center"><div class="flex items-start justify-between text-left"><h4 class="font-semibold">扫码加我微信</h4><button data-qr-close class="text-muted-foreground hover:text-foreground ml-4 text-xl leading-none" aria-label="关闭">×</button></div><img src="/qr/wechat.jpg" alt="微信二维码" class="mx-auto mt-4 w-56 rounded border bg-white p-2" loading="lazy"></div></dialog><script type="module">function e(){document.querySelectorAll(`[data-qr-open]`).forEach(e=>{if(e.dataset.bound)return;e.dataset.bound=`1`;let t=document.getElementById(e.dataset.qrOpen??``);e.addEventListener(`click`,()=>{t instanceof HTMLDialogElement&&t.showModal()})}),document.querySelectorAll(`[data-qr-close]`).forEach(e=>{e.dataset.bound||(e.dataset.bound=`1`,e.addEventListener(`click`,()=>{let t=e.closest(`dialog`);t instanceof HTMLDialogElement&&t.close()}))})}e(),document.addEventListener(`astro:page-load`,e);</script><div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"><span>Copyright &#169; 2026</span><span class="hidden sm:inline">&nbsp;|&nbsp;</span><span>All rights reserved.</span></div></div></footer><dialog id="palette-dialog" aria-labelledby="palette-dialog-title" class="palette-dialog m-0 max-h-none max-w-none bg-transparent p-0 backdrop:bg-transparent open:flex open:items-center open:justify-center" data-astro-cid-hcqnpaxe><div id="palette-dialog-backdrop" class="fixed inset-0 bg-black/45 backdrop-blur-[6px] supports-[backdrop-filter]:bg-black/30" aria-hidden="true" data-astro-cid-hcqnpaxe></div><div role="document" class="palette-dialog-panel relative z-10 flex max-h-[min(68vh,520px)] w-[min(92vw,420px)] flex-col overflow-hidden rounded-xl border border-border bg-background shadow-2xl" data-astro-cid-hcqnpaxe><!-- Search header --><div class="shrink-0 border-b border-border bg-muted/40 px-3 py-2.5" data-astro-cid-hcqnpaxe><label for="palette-search" class="sr-only" data-astro-cid-hcqnpaxe>Search themes…</label><input id="palette-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search themes…" class="w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent" data-astro-cid-hcqnpaxe></div><!-- Title for a11y --><h2 id="palette-dialog-title" class="sr-only" data-astro-cid-hcqnpaxe>Select theme</h2><!-- List --><div class="min-h-0 flex-1 overflow-y-auto overscroll-contain p-1.5" data-astro-cid-hcqnpaxe><ul id="palette-list" role="listbox" aria-label="Select theme" class="flex flex-col gap-0.5" data-astro-cid-hcqnpaxe><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="default" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Default</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="pixel" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Pixel</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="dark-plus" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Dark Plus</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="dracula" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Dracula</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="everforest" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Everforest</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="github-dark" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Github Dark</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="github-light" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Github Light</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="gruvbox-dark" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Gruvbox Dark</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="gruvbox-light" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Gruvbox Light</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="nord" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Nord</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="catppuccin" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Catppuccin</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="tokyo-night" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Tokyo Night</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="kanagawa" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>Kanagawa</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li><li role="presentation" data-astro-cid-hcqnpaxe><button type="button" role="option" data-palette-option="one-dark" aria-selected="false" class="palette-option group flex w-full items-center justify-center gap-2 rounded-md px-3 py-2.5 text-center font-mono text-[13px] leading-none tracking-wide text-accent transition-colors hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground focus-visible:outline-none aria-selected:bg-muted aria-selected:text-foreground" data-astro-cid-hcqnpaxe><span class="palette-dot hidden size-2 shrink-0 rounded-full border border-border bg-accent group-aria-selected:block" aria-hidden="true" data-astro-cid-hcqnpaxe></span><span class="truncate" data-astro-cid-hcqnpaxe>One Dark Pro</span><span data-current-badge class="hidden shrink-0 rounded bg-accent px-1.5 py-0.5 text-[10px] font-sans tracking-normal text-accent-foreground group-aria-selected:inline-block" data-astro-cid-hcqnpaxe>Current</span></button></li></ul><p id="palette-empty" class="hidden px-4 py-8 text-center text-sm text-muted-foreground" role="status" aria-live="polite" data-astro-cid-hcqnpaxe>No matching themes</p></div><!-- Footer hint --><div class="hidden shrink-0 items-center justify-between border-t border-border bg-muted/30 px-3 py-2 text-[11px] text-muted-foreground sm:flex" data-astro-cid-hcqnpaxe><span data-astro-cid-hcqnpaxe>↑↓ Navigate</span><span data-astro-cid-hcqnpaxe>↵ Select</span><span data-astro-cid-hcqnpaxe>Esc Close</span></div></div></dialog><script type="module" src="/_astro/Layout.astro_astro_type_script_index_0_lang.B0LxVWLb.js"></script><script>(function(){const bgImages = {"none":"","bg1":"/_astro/bg1.BA-Kr9sO.png","bg2":"/_astro/bg2.D2x0oqW7.png","bg3":"/_astro/bg3.CXdDd1W3.png","bg4":"/_astro/bg4.AaZbbWmm.png","bg5":"/_astro/bg5.8PNPXNn1.png","bg6":"/_astro/bg6.Cz6-K3xd.png","bg7":"/_astro/bg7.5rAsi43c.png"};
+
+      // Fallback: ensure bg-layer reflects data-bg even if theme.ts not yet executed (e.g., no-JS flicker handled above)
+      (function () {
+        const bg = document.documentElement.getAttribute("data-bg") ?? "none";
+        const layer = document.getElementById("bg-layer");
+        const img = document.getElementById("bg-image");
+        if (!layer || !img) return;
+        const src = bgImages[bg];
+        if (!src) {
+          layer.setAttribute("data-show", "false");
+          layer.classList.add("hidden");
+        } else {
+          img.style.backgroundImage = `url("${src}")`;
+          layer.classList.remove("hidden");
+          requestAnimationFrame(() => layer.setAttribute("data-show", "true"));
+        }
+      })();
+    })();</script></body></html><script data-astro-rerun>
+  function createProgressBar() {
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  function updateScrollProgress() {
+    document.addEventListener("scroll", () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (document) {
+        const myBar = document.getElementById("myBar");
+        if (myBar) {
+          myBar.style.width = scrolled + "%";
+        }
+      }
+    });
+  }
+  updateScrollProgress();
+
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6")
+    );
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  function attachCopyButtons() {
+    const copyButtonLabel = "Copy";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      const computedStyle = getComputedStyle(codeBlock);
+      const hasFileNameOffset =
+        computedStyle.getPropertyValue("--file-name-offset").trim() !== "";
+
+      const topClass = hasFileNameOffset
+        ? "top-(--file-name-offset)"
+        : "-top-3";
+
+      const copyButton = document.createElement("button");
+      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+
+      copyButton.addEventListener("click", async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
+
+    async function copyCode(block, button) {
+      const code = block.querySelector("code");
+      const text = code?.innerText;
+
+      await navigator.clipboard.writeText(text ?? "");
+
+      button.innerText = "Copied";
+
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  }
+  attachCopyButtons();
+
+  /** Accessible image lightbox for article images. */
+  function initLightbox() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const prefersReducedMotion = () =>
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let overlay = null;
+    let lastFocused = null;
+
+    // Defer attribute mutations so they don't push the LCP timestamp.
+    // Event listeners below use delegation and don't need the attributes to exist yet.
+    requestAnimationFrame(() => {
+      const images = Array.from(article.querySelectorAll("img"));
+      for (const image of images) {
+        if (image.closest("a")) continue;
+        image.setAttribute("role", "button");
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("aria-haspopup", "dialog");
+        image.setAttribute(
+          "aria-label",
+          image.alt ? `Zoom image: ${image.alt}` : "Zoom image"
+        );
+      }
+    });
+
+    function open(src, alt, trigger) {
+      if (overlay) return;
+      lastFocused = trigger ?? document.activeElement;
+
+      overlay = document.createElement("div");
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute(
+        "aria-label",
+        alt ? `Image preview: ${alt}` : "Image preview"
+      );
+      overlay.className =
+        "fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-200 motion-reduce:transition-none";
+
+      const closeButton = document.createElement("button");
+      closeButton.type = "button";
+      closeButton.setAttribute("aria-label", "Close image preview");
+      closeButton.className =
+        "absolute end-4 top-4 rounded p-2 text-3xl leading-none text-white";
+      closeButton.innerHTML = "&#10005;";
+      closeButton.addEventListener("click", close);
+
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = "";
+      image.className =
+        "max-h-[90dvh] max-w-[90dvw] cursor-default object-contain";
+
+      overlay.append(closeButton, image);
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay && currentScale <= 1) close();
+      });
+
+      let currentScale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let initialDist = 0;
+      let initialScale = 1;
+      let panStartX = 0;
+      let panStartY = 0;
+      let panStartTranslateX = 0;
+      let panStartTranslateY = 0;
+      let lastTapTime = 0;
+
+      function applyTransform() {
+        image.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+      }
+
+      function resetTransform() {
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        image.style.transform = "";
+      }
+
+      overlay.addEventListener(
+        "touchstart",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            initialDist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            initialScale = currentScale;
+          } else if (t.length === 1) {
+            const now = Date.now();
+            if (now - lastTapTime < 300) {
+              e.preventDefault();
+              if (currentScale > 1) {
+                resetTransform();
+              } else {
+                currentScale = 2;
+                translateX = 0;
+                translateY = 0;
+                applyTransform();
+              }
+              lastTapTime = 0;
+              panStartX = t[0].clientX;
+              panStartY = t[0].clientY;
+              panStartTranslateX = translateX;
+              panStartTranslateY = translateY;
+            } else {
+              lastTapTime = now;
+              if (currentScale > 1) {
+                panStartX = t[0].clientX;
+                panStartY = t[0].clientY;
+                panStartTranslateX = translateX;
+                panStartTranslateY = translateY;
+              }
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener(
+        "touchmove",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            e.preventDefault();
+            const dist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            currentScale = Math.min(
+              4,
+              Math.max(1, initialScale * (dist / initialDist))
+            );
+            applyTransform();
+          } else if (t.length === 1) {
+            if (currentScale > 1) {
+              e.preventDefault();
+              translateX =
+                panStartTranslateX + (t[0].clientX - panStartX) / currentScale;
+              translateY =
+                panStartTranslateY + (t[0].clientY - panStartY) / currentScale;
+              const maxX = Math.max(
+                0,
+                (image.clientWidth - overlay.clientWidth / currentScale) / 2
+              );
+              const maxY = Math.max(
+                0,
+                (image.clientHeight - overlay.clientHeight / currentScale) / 2
+              );
+              translateX = Math.min(maxX, Math.max(-maxX, translateX));
+              translateY = Math.min(maxY, Math.max(-maxY, translateY));
+              applyTransform();
+            } else {
+              e.preventDefault();
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener("touchend", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      overlay.addEventListener("touchcancel", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKeyDown);
+      window.__closeLightbox = close;
+
+      requestAnimationFrame(() => overlay?.classList.add("opacity-100"));
+      closeButton.focus();
+    }
+
+    function close() {
+      if (!overlay) return;
+      const el = overlay;
+      overlay = null;
+      window.__closeLightbox = null;
+
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+      lastFocused?.focus();
+      lastFocused = null;
+
+      if (prefersReducedMotion()) {
+        el.remove();
+        return;
+      }
+      const remove = () => el.remove();
+      el.addEventListener("transitionend", remove, { once: true });
+      setTimeout(remove, 250); // fallback in case transitionend never fires
+      el.classList.remove("opacity-100");
+    }
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        close();
+      } else if (e.key === "Tab") {
+        trapFocus(e);
+      }
+    }
+
+    // Keep keyboard focus inside the open dialog.
+    function trapFocus(e) {
+      if (!overlay) return;
+      const focusables = overlay.querySelectorAll(
+        'a[href], button, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function triggerFromEvent(e) {
+      const image = e.target.closest("img");
+      if (!image || !article.contains(image) || image.closest("a")) return null;
+      return image;
+    }
+
+    function activate(image) {
+      open(image.currentSrc || image.src, image.alt, image);
+    }
+
+    article.addEventListener("click", e => {
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    });
+
+    article.addEventListener("keydown", e => {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    });
+  }
+  initLightbox();
+
+  if (!window.__lightboxSwapBound) {
+    window.__lightboxSwapBound = true;
+    document.addEventListener("astro:before-swap", () =>
+      window.__closeLightbox?.()
+    );
+  }
+
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+
+  function initToc() {
+    const toc = document.getElementById("toc");
+    if (!toc) return;
+    const links = Array.from(toc.querySelectorAll("[data-toc-link]"));
+    if (!links.length) return;
+
+    const headings = links
+      .map(a => document.getElementById(a.getAttribute("data-slug") || ""))
+      .filter(Boolean);
+
+    if (!headings.length) return;
+
+    if (window.__tocObserver) {
+      window.__tocObserver.disconnect();
+      window.__tocObserver = null;
+    }
+
+    const setActive = id => {
+      for (const l of links) {
+        const isActive = l.getAttribute("data-slug") === id;
+        l.classList.toggle("toc-active", isActive);
+        if (isActive) l.setAttribute("aria-current", "true");
+        else l.removeAttribute("aria-current");
+      }
+    };
+
+    for (const link of links) {
+      if (link.dataset.tocBound) continue;
+      link.dataset.tocBound = "true";
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const slug = link.getAttribute("data-slug");
+        const target = slug ? document.getElementById(slug) : null;
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + window.scrollY - 16;
+        window.scrollTo({ top, behavior: "smooth" });
+        history.pushState(null, "", "#" + slug);
+        setActive(slug);
+      });
+    }
+
+    const visible = new Set();
+    const observer = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) visible.add(entry.target.id);
+          else visible.delete(entry.target.id);
+        }
+        let current = null;
+        if (visible.size > 0) {
+          for (const h of headings) {
+            if (visible.has(h.id)) {
+              current = h.id;
+              break;
+            }
+          }
+        } else {
+          let closest = null;
+          let minDist = Infinity;
+          for (const h of headings) {
+            const dist = Math.abs(h.getBoundingClientRect().top);
+            if (dist < minDist) {
+              minDist = dist;
+              closest = h.id;
+            }
+          }
+          current = closest;
+        }
+        if (current) setActive(current);
+      },
+      { rootMargin: "-20% 0px -65% 0px", threshold: 0 }
+    );
+
+    for (const h of headings) observer.observe(h);
+    window.__tocObserver = observer;
+
+    // initial active from hash
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (hash && document.getElementById(hash)) setActive(hash);
+  }
+
+  initToc();
+  document.addEventListener("astro:page-load", initToc);
+  document.addEventListener("astro:after-swap", initToc);
+</script>
