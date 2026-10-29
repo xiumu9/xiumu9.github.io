@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://xiumu9.github.io/sitemap-index.xml
